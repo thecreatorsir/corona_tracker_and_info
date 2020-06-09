@@ -1,0 +1,227 @@
+/* for amin components */
+body {
+  background: linear-gradient(180deg, #ffd373 20%, #ffffff 40%);
+}
+.nav,
+.pic {
+  background-color: rgb(255, 123, 0);
+  display: flex;
+}
+.title {
+  margin-top: 7px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.3em;
+}
+.container {
+  margin-left: 11em;
+  width: 60em;
+  text-align: justify;
+}
+.main-head {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  border: 1px solid;
+  border-radius: 16px;
+  text-align: center;
+  padding-bottom: 7px;
+  width: 10em;
+  background: black;
+  color: white;
+  margin-left: 230px;
+  font-family: "Times New Roman", Times, serif;
+}
+.cards {
+  display: flex;
+  margin-top: 1em;
+}
+.card1,
+.card2 {
+  width: 400px;
+  height: 220px;
+}
+.card1 {
+  margin-right: 4em;
+}
+.data-container {
+  display: inline-flex;
+}
+.data2,
+.data3 {
+  margin-left: 30px;
+}
+.card1 .message {
+  font-size: small;
+  font-family: cursive;
+}
+.chart {
+  width: max-content;
+}
+.panel {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+
+/*panel overlay text*/
+.panel-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.panel-text {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-20%, -20%);
+  text-shadow: 4px 1px 10px #d0fae6;
+  font-size: 5rem;
+}
+
+p,
+li {
+  font-size: 1.5em;
+}
+.footer {
+  background-color: rgb(255, 123, 0);
+  padding: 0px;
+  text-align: center;
+  margin-top: 3em;
+}
+.cpright {
+  background-color: rgb(255, 102, 0);
+}
+address {
+  margin-left: 15em;
+}
+/* for social links */
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.github {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.instagram {
+  background: #f80693;
+  color: white;
+}
+
+.doctor-icon {
+  width: 20em;
+  float: right;
+  margin-right: 68px;
+}
+.info1 {
+  margin-left: 40px;
+  font-size: x-large;
+  font-weight: 100;
+}
+.bg-image {
+  background-image: url("./components/images/panel.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.bg-image2 {
+  background-image: url("./components/images/covid.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 600px;
+}
+.two-jumbo {
+  width: 70em;
+  margin-left: 4em;
+}
+
+.img-wrapper {
+  display: inline-block; /* shrink wrap to image */
+  overflow: hidden;
+}
+.card-img-top {
+  height: 270px;
+  display: block; /* no whitespace */
+  transition: 0.5s ease-in-out;
+}
+.card-img-top:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.symptoms {
+  width: 370px;
+}
+.symptom-container {
+  width: 70em;
+  margin-left: 5em;
+}
+.sym-title {
+  padding: 10px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* wash hands design */
+
+.indicator-container {
+  margin-left: 40px;
+  width: 90%;
+}
+.indicator-wrap {
+  height: 150px;
+  width: 150px;
+}
+.indicator {
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+.indicator:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+/* precautions design */
+.prec1,
+.prec2 {
+  width: 40%;
+  margin-top: 7em;
+  margin-left: 5em;
+}
+.conti {
+  display: flex;
+}
