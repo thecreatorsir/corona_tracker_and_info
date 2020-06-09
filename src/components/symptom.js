@@ -44,7 +44,7 @@ class symptom extends Component {
                 <img className='card-img-top' src={feaver} alt='Card cap' />
               </div>
               <div className='card-body sym-title'>
-                <h3 className='card-title'>Hot Fever</h3>
+                <h3 className='card-title'>High Fever</h3>
               </div>
             </div>
           </div>
