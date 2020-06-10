@@ -12,7 +12,7 @@ class symptom extends Component {
         <h2 className='text-muted'>Symptoms of COVID-19</h2>
         <hr />
         <div className='row mb-3 mt-3'>
-          <div className='col-md-4'>
+          <div className='col-4'>
             <div className='card rounded-0 symptoms'>
               <div className='img-wrapper'>
                 <img
@@ -27,7 +27,7 @@ class symptom extends Component {
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-4'>
             <div className='card rounded-0 symptoms'>
               <div className='img-wrapper'>
                 <img className='card-img-top' src={cough} alt='Card cap' />
@@ -38,7 +38,7 @@ class symptom extends Component {
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-4'>
             <div className='card rounded-0 symptoms'>
               <div className='img-wrapper'>
                 <img className='card-img-top' src={feaver} alt='Card cap' />
@@ -51,7 +51,7 @@ class symptom extends Component {
         </div>
 
         <div className='row mb-3'>
-          <div className='col-md-4'>
+          <div className='col-4'>
             <div className='card rounded-0 symptoms'>
               <div className='img-wrapper'>
                 <img className='card-img-top' src={breathing} alt='Card cap' />
@@ -62,7 +62,7 @@ class symptom extends Component {
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-4'>
             <div className='card rounded-0 symptoms'>
               <div className='img-wrapper'>
                 <img className='card-img-top' src={Headache} alt='Card cap' />
@@ -73,7 +73,7 @@ class symptom extends Component {
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-4'>
             <div className='card rounded-0 symptoms'>
               <div className='img-wrapper'>
                 <img className='card-img-top' src={tired} alt='Card cap' />

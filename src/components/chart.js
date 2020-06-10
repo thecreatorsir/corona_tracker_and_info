@@ -40,11 +40,11 @@ class chart extends Component {
       },
 
       options1: {
+        maintainAspectRatio: false,
         title: {
           display: true,
           text: "India stat of COVID-19",
           fontSize: 20,
-          maintainAspectRatio: false,
         },
       },
       data2: {
@@ -59,11 +59,11 @@ class chart extends Component {
         ],
       },
       options2: {
+        maintainAspectRatio: false,
         title: {
           display: true,
           text: "Predicted stat for next 15 day(India COVID-19)",
           fontSize: 20,
-          maintainAspectRatio: false,
         },
       },
     };
@@ -73,10 +73,10 @@ class chart extends Component {
     return (
       <>
         <div className='chart jumbotron'>
-          <Line data={data1} options={options1} height={400} width={800} />
+          <Line data={data1} options={options1} height={400} width={400} />
         </div>
         <div className='chart jumbotron'>
-          <Line data={data2} options={options2} height={400} width={800} />
+          <Line data={data2} options={options2} height={400} width={400} />
         </div>
       </>
     );

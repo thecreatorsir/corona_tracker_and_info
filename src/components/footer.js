@@ -6,7 +6,7 @@ function footer() {
       <footer className='page-footer font-small teal pt-4 footer'>
         <div className='container-fluid text-center text-md-left'>
           <div className='row'>
-            <div className='col-md-6 mt-md-0 mt-3'>
+            <div className='col-md-6 col-sm-6 mt-md-0 mt-3'>
               <address className='text-white'>
                 <h2 className='text-white'>Contact ME!</h2>
                 Developed by:
@@ -30,7 +30,7 @@ function footer() {
 
             <hr className='clearfix w-100 d-md-none pb-3' />
 
-            <div className='col-md-6 mb-md-0 mb-3'>
+            <div className='col-md-6 col-sm-6 mb-md-0 mb-3'>
               <h2 className='text-white'>Quick Links!</h2>
 
               <a href='.nav'>To Top</a>

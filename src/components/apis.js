@@ -83,7 +83,7 @@ class apis extends Component {
       return <div className='display-4'>loading....</div>;
     } else {
       return (
-        <div>
+        <div className='container'>
           <Card India={India} world={world} />
           <Chart
             date={date}

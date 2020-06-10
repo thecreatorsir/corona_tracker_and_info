@@ -2,105 +2,73 @@
 body {
   background: linear-gradient(180deg, #ffd373 20%, #ffffff 40%);
 }
-.nav,
-.pic {
-  background-color: rgb(255, 123, 0);
-  display: flex;
+
+.navbar {
+  background: #f97300;
 }
+
 .title {
-  margin-top: 7px;
+  margin-top: 0.5%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 0.3em;
+  color: #f4f4f4;
 }
-.container {
-  margin-left: 11em;
-  width: 60em;
-  text-align: justify;
+.header {
+  background-image: url("./components/images/panel2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 505px;
+  max-width: 100%;
 }
+.header-title {
+  font-size: xx-large;
+  color: #ffffff;
+  text-shadow: 4px 1px 10px #000000;
+  font-size: 4em;
+  font-weight: bolder;
+}
+.description {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+}
+
 .main-head {
-  margin-top: 12px;
-  margin-bottom: 0px;
-  border: 1px solid;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 1px solid rgb(0, 174, 255);
   border-radius: 16px;
   text-align: center;
-  padding-bottom: 7px;
-  width: 10em;
-  background: black;
-  color: white;
-  margin-left: 230px;
+  padding-bottom: 0.5%;
+  width: 100%;
+  background: #f97300;
+  color: rgb(255, 255, 255);
   font-family: "Times New Roman", Times, serif;
 }
-.cards {
-  display: flex;
-  margin-top: 1em;
-}
-.card1,
-.card2 {
-  width: 400px;
-  height: 220px;
-}
-.card1 {
-  margin-right: 4em;
-}
+
 .data-container {
   display: inline-flex;
-}
-.data2,
-.data3 {
-  margin-left: 30px;
 }
 .card1 .message {
   font-size: small;
   font-family: cursive;
 }
 .chart {
-  width: max-content;
-}
-.panel {
-  max-width: 100%;
-  max-height: 100%;
-  display: block; /* remove extra space below image */
-}
-
-/*panel overlay text*/
-.panel-container {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-.panel-text {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-20%, -20%);
-  text-shadow: 4px 1px 10px #d0fae6;
-  font-size: 5rem;
+  width: 100%;
 }
 
 p,
 li {
   font-size: 1.5em;
 }
-.footer {
-  background-color: rgb(255, 123, 0);
-  padding: 0px;
-  text-align: center;
-  margin-top: 3em;
-}
-.cpright {
-  background-color: rgb(255, 102, 0);
-}
-address {
-  margin-left: 15em;
-}
+
 /* for social links */
-/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 /* Style the icon bar links */
@@ -145,9 +113,9 @@ address {
 }
 
 .doctor-icon {
-  width: 20em;
+  width: 80%;
   float: right;
-  margin-right: 68px;
+  margin-right: 20%;
 }
 .info1 {
   margin-left: 40px;
@@ -158,16 +126,15 @@ address {
   background-image: url("./components/images/panel.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  height: 60%;
+  max-width: 100%;
 }
-.bg-image2 {
-  background-image: url("./components/images/covid.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 600px;
-}
+
 .two-jumbo {
-  width: 70em;
-  margin-left: 4em;
+  width: 80%;
+  margin-left: 10%;
+  height: 40%;
 }
 
 .img-wrapper {
@@ -183,29 +150,48 @@ address {
   cursor: pointer;
   transform: scale(1.3);
 }
-.symptoms {
-  width: 370px;
-}
+
 .symptom-container {
-  width: 70em;
-  margin-left: 5em;
+  width: 90%;
+  margin-left: 5%;
 }
 .sym-title {
-  padding: 10px;
+  padding: 2%;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/* precautions design */
+.bg-image2 {
+  background-image: url("./components/images/covid.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50%;
+  max-width: 100%;
+}
+.prec1,
+.prec2 {
+  width: 70%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.conti {
+  display: flex;
+  z-index: -1;
+}
 /* wash hands design */
-
-.indicator-container {
-  margin-left: 40px;
-  width: 90%;
+.wrapper {
+  margin-top: 3%;
+  margin-left: 7%;
 }
 .indicator-wrap {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
 }
+
 .indicator {
   transition: 0.5s ease-in-out;
   width: 100%;
@@ -215,13 +201,88 @@ address {
   cursor: pointer;
   transform: scale(1.2);
 }
-/* precautions design */
-.prec1,
-.prec2 {
-  width: 40%;
-  margin-top: 7em;
-  margin-left: 5em;
+address {
+  margin-left: 15em;
 }
-.conti {
-  display: flex;
+.footer {
+  margin-top: 10%;
+  background-color: rgb(255, 123, 0);
+  text-align: center;
+}
+.cpright {
+  background-color: rgb(255, 102, 0);
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 15px;
+  }
+  .header {
+    height: 300px;
+  }
+  .description {
+    position: absolute;
+    top: 25%;
+    margin: auto;
+    padding: 2em;
+  }
+
+  .header-title {
+    color: #ffffff;
+    text-shadow: 4px 1px 10px #000000;
+    font-size: 2em;
+    font-weight: bolder;
+    margin: 0px;
+  }
+
+  .main-head {
+    font-size: larger;
+  }
+  .card1 > .card-text {
+    font-size: small;
+  }
+  .data2,
+  .data3 > .card-title {
+    margin-left: 10px;
+  }
+  .icon-bar a {
+    padding: 10px;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  address {
+    margin-left: 0;
+  }
+  .doctor-icon {
+    display: none;
+  }
+  .card-img-top {
+    height: 70px;
+    display: block;
+    transition: 0.5s ease-in-out;
+  }
+  .sym-title h3 {
+    padding: 2%;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: x-small;
+  }
+  .card-text li {
+    font-size: x-small;
+  }
+  .prec1 > .card-header,
+  .prec2 > .card-header {
+    font-size: x-small;
+  }
+  .indicator-wrap {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 7%;
+  }
+  .col-md-1 {
+    margin-bottom: 20%;
+  }
 }

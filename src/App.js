@@ -8,19 +8,18 @@ import Symptom from "./components/symptom";
 import Washhand from "./components/wash_hands";
 import Precautions from "./components/precautions";
 import "./style.css";
-import img1 from "./components/images/panel2.jpg";
 function App() {
   return (
     <div className='App'>
       <Nav />
-      <div className='panel-container'>
-        <img className='panel' src={img1} alt='panel' />
-        <div className='panel-text'>Covid-19 The Pendamic</div>
-      </div>
+
+      <header className='header'>
+        <div class='description '>
+          <div className='header-title'>Covid-19 The Pendamic</div>
+        </div>
+      </header>
       <Social />
-      <div className='container'>
-        <Api />
-      </div>
+      <Api />
       <Info />
       <Symptom />
       <Precautions />
