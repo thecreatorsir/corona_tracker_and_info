@@ -228,12 +228,14 @@ address {
   }
   .description {
     position: absolute;
+    margin-bottom: 40%;
   }
 
   .header-title {
     color: #ffffff;
     text-shadow: 4px 1px 10px #000000;
-    font-size: 20px;
+    font-size: 22px;
+
     font-weight: bolder;
   }
 

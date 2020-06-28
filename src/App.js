@@ -14,7 +14,7 @@ function App() {
       <Nav />
 
       <header className='header'>
-        <div className='description '>
+        <div className='description'>
           <div className='header-title'>Covid-19 The Pendamic</div>
         </div>
       </header>
