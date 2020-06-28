@@ -30,7 +30,9 @@ class timer extends Component {
   render() {
     const { hours, min, sec } = this.state;
     let day = hours >= 12 ? "PM" : "AM";
-    return <div className='text-white'>{`${hours}:${min}:${sec} ${day}`}</div>;
+    return (
+      <div className='text-white timer'>{`${hours}:${min}:${sec} ${day}`}</div>
+    );
   }
 }
 

@@ -1,6 +1,6 @@
 /* for amin components */
 body {
-  background: linear-gradient(180deg, #ffd373 20%, #ffffff 40%);
+  background: linear-gradient(180deg, #ffd373 30%, #ffffff 60%);
 }
 
 .navbar {
@@ -57,7 +57,11 @@ body {
 .chart {
   width: 100%;
 }
-
+.tb {
+  background-color: #ffffff;
+  padding: 3%;
+  margin: 6%;
+}
 p,
 li {
   font-size: 1.5em;
@@ -213,6 +217,9 @@ address {
   background-color: rgb(255, 102, 0);
 }
 @media (max-width: 500px) {
+  .timer {
+    font-size: 12px;
+  }
   .title {
     font-size: 15px;
   }
@@ -221,17 +228,14 @@ address {
   }
   .description {
     position: absolute;
-    top: 25%;
-    margin: auto;
-    padding: 2em;
+    top: 50%;
   }
 
   .header-title {
     color: #ffffff;
     text-shadow: 4px 1px 10px #000000;
-    font-size: 2em;
+    font-size: 25px;
     font-weight: bolder;
-    margin: 0px;
   }
 
   .main-head {
@@ -251,6 +255,24 @@ address {
     text-align: center;
     transition: all 0.3s ease;
     color: white;
+  }
+  .tb {
+    background-color: #ffffff;
+    padding: 0%;
+    margin: 0%;
+  }
+  th {
+    font-size: 10px;
+    text-align: center;
+  }
+  td {
+    font-size: 10px;
+    text-align: center;
+  }
+  .tablehead {
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: right;
   }
   address {
     margin-left: 0;

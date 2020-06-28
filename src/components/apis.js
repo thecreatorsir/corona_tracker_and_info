@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Card from "./cards";
 import Chart from "./chart";
-
+import StateInfo from "./StatesInfo";
 //api call
 async function get(url) {
   //async will return the premise
@@ -19,12 +19,14 @@ class apis extends Component {
       world: {},
       isloaded: false,
       loadData: false,
+      loadStates: false,
       date: [],
       cases: [],
       deaths: [],
       recovered: [],
       predictionDates: [],
       predictCases: [],
+      statesData: [],
     };
   }
   componentDidMount() {
@@ -63,12 +65,21 @@ class apis extends Component {
         predictCases: data.map((data) => data.cases),
       });
     });
+
+    //for states
+    get(`https://api.covid19india.org/data.json`).then((data) => {
+      this.setState({
+        loadStates: true,
+        statesData: data.statewise,
+      });
+    });
   }
 
   render() {
     const {
       isloaded,
       loadData,
+      loadStates,
       India,
       world,
       date,
@@ -77,23 +88,27 @@ class apis extends Component {
       recovered,
       predictionDates,
       predictCases,
+      statesData,
     } = this.state;
 
-    if (!isloaded && !loadData) {
+    if (!isloaded && !loadData && !loadStates) {
       return <div className='display-4'>loading....</div>;
     } else {
       return (
-        <div className='container'>
-          <Card India={India} world={world} />
-          <Chart
-            date={date}
-            cases={cases}
-            deaths={deaths}
-            recovered={recovered}
-            predictionDates={predictionDates}
-            predictCases={predictCases}
-          />
-        </div>
+        <>
+          <div className='container'>
+            <Card India={India} world={world} />
+            <Chart
+              date={date}
+              cases={cases}
+              deaths={deaths}
+              recovered={recovered}
+              predictionDates={predictionDates}
+              predictCases={predictCases}
+            />
+          </div>
+          <StateInfo statesData={statesData} />
+        </>
       );
     }
   }
