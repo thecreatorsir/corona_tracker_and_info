@@ -47,13 +47,13 @@ class apis extends Component {
     });
 
     //getting data for graph
-    get(`https://covid19-api.org/api/timeline/IN`).then((data) => {
+    get(`https://api.covid19api.com/total/country/india`).then((data) => {
       this.setState({
         loadData: true,
-        date: data.map((data) => data.last_update).reverse(),
-        cases: data.map((data) => data.cases).reverse(),
-        deaths: data.map((data) => data.deaths).reverse(),
-        recovered: data.map((data) => data.recovered).reverse(),
+        date: data.map((data) => data.Date),
+        cases: data.map((data) => data.Confirmed),
+        deaths: data.map((data) => data.Deaths),
+        recovered: data.map((data) => data.Recovered),
       });
     });
 

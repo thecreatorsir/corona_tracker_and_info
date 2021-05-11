@@ -8,8 +8,6 @@ class chart extends Component {
     this.state = {
       data1: {},
       options1: {},
-      data2: {},
-      options2: {},
     };
   }
   static getDerivedStateFromProps(props, state) {
@@ -47,36 +45,14 @@ class chart extends Component {
           fontSize: 20,
         },
       },
-      data2: {
-        labels: props.predictionDates,
-        datasets: [
-          {
-            label: "cases",
-            fill: false,
-            borderColor: "rgb(252, 9, 13)",
-            data: props.predictCases,
-          },
-        ],
-      },
-      options2: {
-        maintainAspectRatio: false,
-        title: {
-          display: true,
-          text: "Predicted stat for next 15 day(India COVID-19)",
-          fontSize: 20,
-        },
-      },
     };
   }
   render() {
-    const { data1, options1, data2, options2 } = this.state;
+    const { data1, options1 } = this.state;
     return (
       <>
         <div className='chart jumbotron'>
           <Line data={data1} options={options1} height={400} width={400} />
-        </div>
-        <div className='chart jumbotron'>
-          <Line data={data2} options={options2} height={400} width={400} />
         </div>
       </>
     );
