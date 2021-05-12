@@ -1,6 +1,6 @@
 import React from "react";
 
-function socialLink() {
+function SocialLink() {
   return (
     <div className='icon-bar'>
       <a
@@ -43,4 +43,4 @@ function socialLink() {
   );
 }
 
-export default socialLink;
+export default SocialLink;

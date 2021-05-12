@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Card from "./cards";
-import Chart from "./chart";
-import StateInfo from "./StatesInfo";
+import Card from "./stats-and-charts/Cards";
+import Chart from "./stats-and-charts/Chart";
+import StateInfo from "./stats-and-charts/StatesInfo";
 //api call
 async function get(url) {
   //async will return the premise
@@ -10,7 +10,7 @@ async function get(url) {
   return resData;
 }
 
-class apis extends Component {
+class Apis extends Component {
   constructor(props) {
     super(props);
 
@@ -114,4 +114,4 @@ class apis extends Component {
   }
 }
 
-export default apis;
+export default Apis;

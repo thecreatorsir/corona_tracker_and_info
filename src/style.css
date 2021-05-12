@@ -14,7 +14,7 @@ body {
   color: #f4f4f4;
 }
 .header {
-  background-image: url("./components/images/panel2.jpg");
+  background-image: url("./components/assets/images/panel2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -127,7 +127,7 @@ li {
   font-weight: 100;
 }
 .bg-image {
-  background-image: url("./components/images/panel.jpg");
+  background-image: url("./components/assets/images/panel.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -167,7 +167,7 @@ li {
 
 /* precautions design */
 .bg-image2 {
-  background-image: url("./components/images/covid.jpg");
+  background-image: url("./components/assets/images/covid.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

@@ -1,7 +1,7 @@
 import React from "react";
-import img from "./images/corona.png";
-import Timer from "./timer";
-function nav() {
+import img from "../assets/images/corona.png";
+import Timer from "../utils/Timer";
+function Nav() {
   return (
     <React.Fragment>
       <nav className='navbar navbar-expand-lg fixed-top'>
@@ -13,4 +13,4 @@ function nav() {
   );
 }
 
-export default nav;
+export default Nav;

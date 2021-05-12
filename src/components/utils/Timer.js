@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class timer extends Component {
+class Timer extends Component {
   constructor(props) {
     super(props);
 
@@ -36,4 +36,4 @@ class timer extends Component {
   }
 }
 
-export default timer;
+export default Timer;

@@ -1,5 +1,5 @@
 import React from "react";
-function precautions() {
+function Precautions() {
   return (
     <div>
       <div className='bg-image2'>
@@ -56,4 +56,4 @@ function precautions() {
   );
 }
 
-export default precautions;
+export default Precautions;

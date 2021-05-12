@@ -1,11 +1,11 @@
 import React from "react";
-import soaphand from "./images/soap-hand.png";
-import clwater from "./images/cl-water.png";
-import wrist from "./images/wrist.png";
-import betweenfinger from "./images/between-finger.png";
-import palm from "./images/palm-to-palm.png";
-import handback from "./images/hand-back.png";
-function wash_hands() {
+import soaphand from "../assets/images/soap-hand.png";
+import clwater from "../assets/images/cl-water.png";
+import wrist from "../assets/images/wrist.png";
+import betweenfinger from "../assets/images/between-finger.png";
+import palm from "../assets/images/palm-to-palm.png";
+import handback from "../assets/images/hand-back.png";
+function WashHandSigns() {
   return (
     <>
       <div className='container mb-5'>
@@ -62,4 +62,4 @@ function wash_hands() {
   );
 }
 
-export default wash_hands;
+export default WashHandSigns;

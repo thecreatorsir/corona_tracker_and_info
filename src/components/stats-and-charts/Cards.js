@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class cards extends Component {
+class Cards extends Component {
   render() {
     const { India, world } = this.props;
 
@@ -74,4 +74,4 @@ class cards extends Component {
   }
 }
 
-export default cards;
+export default Cards;

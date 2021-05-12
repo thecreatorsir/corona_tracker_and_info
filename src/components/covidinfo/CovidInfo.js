@@ -1,7 +1,7 @@
 import React from "react";
-import Doctor from "./images/female_doctor.png";
+import Doctor from "../assets/images/female_doctor.png";
 
-function info() {
+function CovidInfo() {
   return (
     <>
       <div className='jumbotron'>
@@ -131,4 +131,4 @@ function info() {
   );
 }
 
-export default info;
+export default CovidInfo;

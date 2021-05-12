@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import sore_throat from "./images/sore_throats.jpg";
-import cough from "./images/cough.webp";
-import feaver from "./images/feaver.jpg";
-import breathing from "./images/breathing.png";
-import Headache from "./images/headache.jpg";
-import tired from "./images/tired.jpg";
-class symptom extends Component {
+import sore_throat from "../assets/images/sore_throats.jpg";
+import cough from "../assets/images/cough.webp";
+import feaver from "../assets/images/feaver.jpg";
+import breathing from "../assets/images/breathing.png";
+import Headache from "../assets/images/headache.jpg";
+import tired from "../assets/images/tired.jpg";
+class Symptoms extends Component {
   render() {
     return (
       <div className='symptom-container mt-5'>
@@ -89,4 +89,4 @@ class symptom extends Component {
   }
 }
 
-export default symptom;
+export default Symptoms;

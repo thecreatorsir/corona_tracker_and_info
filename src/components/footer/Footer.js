@@ -1,6 +1,6 @@
 import React from "react";
 
-function footer() {
+function Footer() {
   return (
     <>
       <footer className='page-footer font-small teal pt-4 footer'>
@@ -57,4 +57,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

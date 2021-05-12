@@ -1,29 +1,25 @@
 import React from "react";
-import Nav from "./components/nav";
-import Api from "./components/apis";
-import Social from "./components/socialLink";
-import Info from "./components/info";
-import Footer from "./components/footer";
-import Symptom from "./components/symptom";
-import Washhand from "./components/wash_hands";
-import Precautions from "./components/precautions";
 import "./style.css";
+import Nav from "./components/navbar/Nav";
+import Api from "./components/Apis";
+import SocialLink from "./components/utils/SocialLink";
+import CovidInfo from "./components/covidinfo/CovidInfo";
+import Footer from "./components/footer/Footer";
+import Symptoms from "./components/covidinfo/Symptoms";
+import WashHandSigns from "./components/directions/WashHandSigns";
+import Precautions from "./components/covidinfo/Precautions";
+import Header from "./components/header/Header";
 function App() {
   return (
     <div className='App'>
       <Nav />
-
-      <header className='header'>
-        <div className='description text-center'>
-          <div className='header-title text-center'>Covid-19 The Pendamic</div>
-        </div>
-      </header>
-      <Social />
+      <Header />
+      <SocialLink />
       <Api />
-      <Info />
-      <Symptom />
+      <CovidInfo />
+      <Symptoms />
       <Precautions />
-      <Washhand />
+      <WashHandSigns />
       <Footer />
     </div>
   );
