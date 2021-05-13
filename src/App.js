@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.css";
 import Nav from "./components/navbar/Nav";
-import Api from "./components/Apis";
+import Chart from "./components/stats-and-charts/ChartUtil";
+import Overall from "./components/stats-and-charts/Overall";
+import StatesInfo from "./components/stats-and-charts/StatesInfo";
 import SocialLink from "./components/utils/SocialLink";
 import CovidInfo from "./components/covidinfo/CovidInfo";
 import Footer from "./components/footer/Footer";
@@ -15,7 +17,9 @@ function App() {
       <Nav />
       <Header />
       <SocialLink />
-      <Api />
+      <Overall />
+      <Chart />
+      <StatesInfo />
       <CovidInfo />
       <Symptoms />
       <Precautions />
