@@ -60,7 +60,7 @@ function CovidInfo() {
                     <div className='panel-heading'>
                       <h4 className='panel-title'>
                         <a
-                          className='btn btn-primary btn-lg lead'
+                          className='btn btn-lg lead jumbo-btn'
                           data-toggle='collapse'
                           href='#collapse1'
                           role='button'
@@ -102,7 +102,7 @@ function CovidInfo() {
                     <div className='panel-heading'>
                       <h4 className='panel-title'>
                         <a
-                          className='btn btn-primary btn-lg lead'
+                          className='btn btn-lg lead jumbo-btn'
                           data-toggle='collapse'
                           href='#collapse2'
                           role='button'

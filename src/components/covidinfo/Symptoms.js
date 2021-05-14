@@ -9,7 +9,7 @@ class Symptoms extends Component {
   render() {
     return (
       <div className='symptom-container mt-5'>
-        <h2 className='text-muted'>Symptoms of COVID-19</h2>
+        <h2 className='symptoms-heading'>Symptoms of COVID-19</h2>
         <hr />
         <div className='row mb-3 mt-3'>
           <div className='col-4'>

@@ -1,58 +1,56 @@
 import React, { Component } from "react";
-import Chart from "./Chart";
-//api call
-async function get(url) {
-  //async will return the premise
-  const response = await fetch(url);
-  const resData = await response.json();
-  return resData;
-}
+import { Line } from "react-chartjs-2";
 
-class Apis extends Component {
+class ChartUtil extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      loadData: false,
-      date: [],
-      cases: [],
-      deaths: [],
-      recovered: [],
+      data1: {},
+      options1: {},
     };
   }
-  componentDidMount() {
-    //getting data for graph
-    get(`https://api.covid19api.com/total/country/india`).then((data) => {
-      this.setState({
-        loadData: true,
-        date: data.map((data) => data.Date),
-        cases: data.map((data) => data.Confirmed),
-        deaths: data.map((data) => data.Deaths),
-        recovered: data.map((data) => data.Recovered),
-      });
-    });
+  static getDerivedStateFromProps(props, state) {
+    return {
+      data1: {
+        labels: props.date,
+        datasets: [
+          {
+            label: "cases",
+            fill: false,
+            borderColor: "rgb(252, 9, 13)",
+            data: props.cases,
+          },
+
+          {
+            label: "recovered",
+            fill: false,
+            borderColor: "rgb(28, 98, 12)",
+            data: props.recovered,
+          },
+          {
+            label: "deaths",
+            fill: false,
+            borderColor: "rgb(255, 99, 132)",
+            data: props.deaths,
+          },
+        ],
+      },
+
+      options1: {
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: "India stat of COVID-19",
+          fontSize: 20,
+        },
+      },
+    };
   }
-
   render() {
-    const { loadData, date, cases, deaths, recovered } = this.state;
-
-    if (!loadData) {
-      return <div className='display-4'>loading....</div>;
-    } else {
-      return (
-        <>
-          <div className='container'>
-            <Chart
-              date={date}
-              cases={cases}
-              deaths={deaths}
-              recovered={recovered}
-            />
-          </div>
-        </>
-      );
-    }
+    const { data1, options1 } = this.state;
+    return <Line data={data1} options={options1} height={400} width={400} />;
   }
 }
 
-export default Apis;
+export default ChartUtil;
