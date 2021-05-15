@@ -41,7 +41,7 @@ class ChartUtil extends Component {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: "India stat of COVID-19",
+          text: `${props.country} stat of COVID-19`,
           fontSize: 20,
         },
       },

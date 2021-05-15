@@ -26,6 +26,7 @@ class Chart extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     // //for country wise stat
+
     if (prevState.country !== this.state.country) {
       get(
         `https://api.covid19api.com/total/country/${this.state.country}`
@@ -61,8 +62,7 @@ class Chart extends Component {
   }
 
   render() {
-    const { date, cases, deaths, recovered } = this.state;
-
+    const { date, cases, deaths, recovered, country } = this.state;
     return (
       <div className='container'>
         <div className='jumbotron chart-container'>
@@ -76,6 +76,7 @@ class Chart extends Component {
               cases={cases}
               deaths={deaths}
               recovered={recovered}
+              country={country}
             />
           </div>
         </div>
