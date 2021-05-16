@@ -6,6 +6,7 @@ import Footer from "./components/Layout/Footer";
 import Landing from "./components/Layout/Landing";
 import StatesInfo from "./components/stats-and-charts/StatesInfo";
 import CovidInfo from "./components/covidinfo/CovidInfo";
+import VaccinationInfo from "./components/stats-and-charts/VaccinationInfo";
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
         <Route exact path='/' component={Landing} />
         <Route exact path='/state-info' component={StatesInfo} />
         <Route exact path='/more-info' component={CovidInfo} />
+        <Route exact path='/vaccination-info' component={VaccinationInfo} />
         <Footer />
       </div>
     </Router>

@@ -11,6 +11,12 @@ body {
 .row {
   margin: 0;
 }
+
+p,
+li {
+  font-size: 1.5em;
+}
+
 .navbar {
   background: rgb(1, 51, 41);
 }
@@ -18,8 +24,10 @@ body {
 .title {
   margin-top: 0.5%;
   letter-spacing: 0.3em;
-  color: #f4f4f4;
+  color: rgb(234, 234, 234);
 }
+
+/* section containing card and global data starts*/
 .covid-short-info {
   color: rgb(234, 234, 234);
   font-size: x-small;
@@ -120,26 +128,56 @@ body {
 
 /*explore more ends */
 
-.tb {
-  background-color: #ffffff;
+/* back button starts */
+
+.back-btn {
+  margin-top: 100px;
+}
+.back-btn a {
+  text-decoration: none;
+  font-size: larger;
+  color: rgb(234, 234, 234);
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(225deg, rgb(0, 101, 80), rgb(7, 23, 0));
+}
+
+/* back button starts ends */
+
+/* vaccination starts */
+.vaccination-container {
+  text-align: center;
+  color: rgb(234, 234, 234);
+  margin-top: 10px;
+}
+
+/* vaccination end */
+
+/* state data display starts */
+.states-data-container {
+  background-color: rgb(234, 234, 234);
   padding: 3%;
   margin: 6%;
 }
-p,
-li {
-  font-size: 1.5em;
-}
+/* state data display ends */
 
+/* more info starts */
 .doctor-icon {
   width: 80%;
   float: right;
   margin-right: 20%;
 }
-.info1 {
-  margin-left: 40px;
+
+.covid-info-heading {
+  font-size: 5vw;
+  margin-left: 12px;
+}
+
+.covid-info-text {
   font-size: x-large;
   font-weight: 100;
 }
+
 .bg-image {
   background-image: url("./components/assets/images/panel.jpg");
   background-repeat: no-repeat;
@@ -152,11 +190,13 @@ li {
 .jumbo-btn:hover {
   color: rgb(234, 234, 234);
 }
-.two-jumbo {
-  width: 80%;
-  margin-left: 10%;
-  height: 40%;
+
+.jumbo-btn {
+  background: linear-gradient(225deg, rgb(0, 101, 80), rgb(7, 23, 0));
+  color: rgb(234, 234, 234);
 }
+
+/* more info ends */
 
 .img-wrapper {
   display: inline-block; /* shrink wrap to image */
@@ -205,11 +245,7 @@ li {
   display: flex;
   z-index: -1;
 }
-/* wash hands design */
-.indicator-container {
-  color: rgb(234, 234, 234);
-}
-
+/* wash hands starts*/
 .indicator-container {
   color: rgb(234, 234, 234);
 }
@@ -217,19 +253,20 @@ li {
 .wash-hands {
   margin: auto;
 }
-.jumbo-btn {
-  background: linear-gradient(225deg, rgb(0, 101, 80), rgb(7, 23, 0));
-  color: rgb(234, 234, 234);
-}
+
 .indicator {
   transition: 0.5s ease-in-out;
   height: 130px;
   width: 130px;
 }
+
 .indicator:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
+
+/* wash hands ends*/
+
 address {
   margin-left: 15em;
 }
@@ -277,15 +314,10 @@ address {
     font-size: small;
     margin-left: 20px;
   }
-  .tb {
-    background-color: rgb(234, 234, 234);
-    padding: 0%;
-    margin: 0%;
+  .back-btn {
+    margin-top: 180px;
   }
-  th {
-    font-size: 10px;
-    text-align: center;
-  }
+  th,
   td {
     font-size: 10px;
     text-align: center;
@@ -295,9 +327,12 @@ address {
     padding-top: 5px;
     text-align: right;
   }
-  address {
-    margin-left: 0;
+
+  .covid-info-text {
+    font-size: large;
+    font-weight: 100;
   }
+
   .doctor-icon {
     display: none;
   }
@@ -317,5 +352,9 @@ address {
   .prec1 > .card-header,
   .prec2 > .card-header {
     font-size: x-small;
+  }
+
+  address {
+    margin-left: 0;
   }
 }

@@ -1,14 +1,17 @@
 import React from "react";
 import Doctor from "../assets/images/female_doctor.png";
-
+import { Link } from "react-router-dom";
 function CovidInfo() {
   return (
-    <>
-      <div className='jumbotron'>
-        <h1 className='text-muted ml-5'>What is CORONA virus</h1>
+    <div className='container'>
+      <div className='back-btn'>
+        <Link to='/'>Back to home</Link>
+      </div>
+      <div className='jumbotron mt-4'>
+        <h1 className='text-muted covid-info-heading'>What is CORONA virus</h1>
         <div className='row'>
-          <div className='col-md-8 col-lg-8 col-sm-12'>
-            <p className='info1'>
+          <div className='col-md-8'>
+            <p className='covid-info-text'>
               Coronavirus disease (COVID-19) is an infectious disease caused by
               a newly discovered coronavirus. Most people infected with the
               COVID-19 virus will experience mild to moderate respiratory
@@ -38,88 +41,84 @@ function CovidInfo() {
       </div>
 
       <div className='bg-image'>
-        <div className='two-jumbo'>
-          <div className=' row'>
-            <div className='col-md-6 col-sm-12'>
-              <div className='jumbotron rounded-0 mt-5'>
-                <h1 className='display-4'>
-                  Is there more than one strain of SARS-CoV-2?
-                </h1>
-                <p className='lead'>
-                  It’s normal for a virus to change, or mutate, as it infects
-                  people.
-                </p>
-                <hr className='my-4  display-5' />
-                <p>
-                  A Chinese study of 103 COVID-19 cases suggests the virus that
-                  causes it has done just that.
-                </p>
+        <div className=' row'>
+          <div className='col-md-6'>
+            <div className='jumbotron rounded-0 mt-4'>
+              <h1 className='display-4'>
+                Is there more than one strain of SARS-CoV-2?
+              </h1>
+              <p className='lead'>
+                It’s normal for a virus to change, or mutate, as it infects
+                people.
+              </p>
+              <hr className='my-4  display-5' />
+              <p>
+                A Chinese study of 103 COVID-19 cases suggests the virus that
+                causes it has done just that.
+              </p>
 
-                <div className='panel-group'>
-                  <div className='panel panel-default'>
-                    <div className='panel-heading'>
-                      <h4 className='panel-title'>
-                        <a
-                          className='btn btn-lg lead jumbo-btn'
-                          data-toggle='collapse'
-                          href='#collapse1'
-                          role='button'
-                        >
-                          Learn more
-                        </a>
-                      </h4>
-                    </div>
-                    <div id='collapse1' className='panel-collapse collapse'>
-                      <p>
-                        They found two strains, which they named L and S. The S
-                        type is older, but the L type was more common in early
-                        stages of the outbreak. They think one may cause more
-                        cases of the disease than the other, but they’re still
-                        working on what it all means.
-                      </p>
-                    </div>
+              <div className='panel-group'>
+                <div className='panel panel-default'>
+                  <div className='panel-heading'>
+                    <h4 className='panel-title'>
+                      <a
+                        className='btn btn-lg lead jumbo-btn'
+                        data-toggle='collapse'
+                        href='#collapse1'
+                        role='button'
+                      >
+                        Learn more
+                      </a>
+                    </h4>
+                  </div>
+                  <div id='collapse1' className='panel-collapse collapse'>
+                    <p>
+                      They found two strains, which they named L and S. The S
+                      type is older, but the L type was more common in early
+                      stages of the outbreak. They think one may cause more
+                      cases of the disease than the other, but they’re still
+                      working on what it all means.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='col-md-6 col-sm-12'>
-              <div className='jumbotron rounded-0 mt-5'>
-                <h1 className='display-4'>
-                  How long will the coronavirus last?
-                </h1>
-                <p className='lead'>
-                  It’s too soon to tell how long the pandemic will continue.
-                </p>
-                <hr className='my-4' />
-                <p>
-                  It depends on many things, including researchers’ work to
-                  learn more about the virus, their search for a treatment and a
-                  vaccine, and the public’s efforts to slow the spread.
-                </p>
+          </div>
+          <div className='col-md-6'>
+            <div className='jumbotron rounded-0 mt-4'>
+              <h1 className='display-4'>How long will the coronavirus last?</h1>
+              <p className='lead'>
+                It’s too soon to tell how long the pandemic will continue.
+              </p>
+              <hr className='my-4' />
+              <p>
+                It depends on many things, including researchers’ work to learn
+                more about the virus, their search for a treatment and a
+                vaccine, and the public’s efforts to slow the spread.
+              </p>
 
-                <div className='panel-group'>
-                  <div className='panel panel-default'>
-                    <div className='panel-heading'>
-                      <h4 className='panel-title'>
-                        <a
-                          className='btn btn-lg lead jumbo-btn'
-                          data-toggle='collapse'
-                          href='#collapse2'
-                          role='button'
-                        >
-                          Learn more
-                        </a>
-                      </h4>
-                    </div>
-                    <div id='collapse2' className='panel-collapse collapse'>
-                      <p>
-                        More than 100 vaccine candidates are in various stages
-                        of development and testing. This process usually takes
-                        years. Researchers are speeding it up as much as they
-                        can, but it still might take 12 to 18 months to find a
-                        vaccine that works and is safe.
-                      </p>
-                    </div>
+              <div className='panel-group'>
+                <div className='panel panel-default'>
+                  <div className='panel-heading'>
+                    <h4 className='panel-title'>
+                      <a
+                        className='btn btn-lg lead jumbo-btn'
+                        data-toggle='collapse'
+                        href='#collapse2'
+                        role='button'
+                      >
+                        Learn more
+                      </a>
+                    </h4>
+                  </div>
+                  <div id='collapse2' className='panel-collapse collapse'>
+                    <p>
+                      More than 100 vaccine candidates are in various stages of
+                      development and testing. This process usually takes years.
+                      Researchers are speeding it up as much as they can, but it
+                      still might take 12 to 18 months to find a vaccine that
+                      works and is safe.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -127,7 +126,7 @@ function CovidInfo() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

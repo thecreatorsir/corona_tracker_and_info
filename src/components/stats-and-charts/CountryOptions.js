@@ -11,7 +11,6 @@ class CountryOptions extends Component {
 
   handleChange(event) {
     if (this.props.call_by === "graph") {
-      console.log("called");
       this.props.get_country_graph(event.target.value);
     } else {
       this.props.get_country(event.target.value);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-
+import { Link } from "react-router-dom";
 //api call
 async function get(url) {
   //async will return the premise
@@ -43,8 +43,11 @@ class StatesInfo extends Component {
       return <div className='display-4'>loading....</div>;
     } else {
       return (
-        <div>
-          <div className='tb'>
+        <div className='container'>
+          <div className='back-btn'>
+            <Link to='/'>Back to home</Link>
+          </div>
+          <div className='states-data-container'>
             <div className='h2 text-center text-muted tablehead'>
               Statewise Data
             </div>

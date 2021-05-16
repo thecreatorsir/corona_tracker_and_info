@@ -48,7 +48,6 @@ class Cards extends Component {
   }
 
   get_country(value) {
-    console.log("test");
     this.setState({
       country: value,
     });
