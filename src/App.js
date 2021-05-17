@@ -7,9 +7,11 @@ import Landing from "./components/Layout/Landing";
 import StatesInfo from "./components/stats-and-charts/StatesInfo";
 import CovidInfo from "./components/covidinfo/CovidInfo";
 import VaccinationInfo from "./components/stats-and-charts/VaccinationInfo";
+import ScrollToTop from "./components/common/ScrollToTop";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className='App'>
         <Nav />
         <Route exact path='/' component={Landing} />

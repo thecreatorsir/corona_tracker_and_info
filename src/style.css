@@ -279,6 +279,16 @@ address {
   background-color: rgb(1, 51, 41);
 }
 
+.loading {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.loading img {
+  width: 50%;
+  height: auto;
+}
+
 @media (max-width: 700px) {
   .timer {
     font-size: 12px;
@@ -288,6 +298,7 @@ address {
     margin-top: 130px;
   }
   .card-container {
+    padding: 0;
     margin-top: 30px;
   }
   .figures {
@@ -299,15 +310,14 @@ address {
     font-size: 0.8rem;
   }
   .global-data-container {
-    margin-top: 70px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 50px;
     border: 1px solid rgb(234, 234, 234);
   }
   .global-data-heading {
     font-weight: 400;
     font-size: xx-large;
-    margin-left: 50px;
+    margin: 0;
+    margin-left: 15px;
   }
 
   .global_data {
@@ -356,5 +366,8 @@ address {
 
   address {
     margin-left: 0;
+  }
+  .loading {
+    margin-top: 160px;
   }
 }

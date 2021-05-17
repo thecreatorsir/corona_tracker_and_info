@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import Loading from "../common/Loading";
 //api call
 async function get(url) {
   //async will return the premise
@@ -40,7 +41,7 @@ class StatesInfo extends Component {
     });
 
     if (!loadData) {
-      return <div className='display-4'>loading....</div>;
+      return <Loading />;
     } else {
       return (
         <div className='container'>

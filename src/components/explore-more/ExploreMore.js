@@ -5,25 +5,25 @@ function ExploreMore() {
     <div className='container'>
       <div className='row explore-more-container'>
         <div className='col-md-4'>
-          <div className='more-info'>
-            <Link to='/more-info'>
+          <Link to='/more-info'>
+            <div className='more-info'>
               More Info <i className='fal fa-chevron-right'></i>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
         <div className='col-md-4'>
-          <div className='state-data'>
-            <Link to='/state-info'>
+          <Link to='/state-info'>
+            <div className='state-data'>
               Realtime States Data <i className='fal fa-chevron-right'></i>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
         <div className='col-md-4'>
-          <div className='vaccination-info'>
-            <Link to='/vaccination-info'>
+          <Link to='/vaccination-info'>
+            <div className='vaccination-info'>
               Vaccination Info <i className='fal fa-chevron-right'></i>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
