@@ -1,5 +1,5 @@
 import React from "react";
-
+import Counter from "../common/Counter";
 function Footer() {
   return (
     <>
@@ -51,6 +51,9 @@ function Footer() {
           >
             thecreatorsir
           </a>
+          <span className='page-hit'>
+            <Counter />
+          </span>
         </div>
       </footer>
     </>
