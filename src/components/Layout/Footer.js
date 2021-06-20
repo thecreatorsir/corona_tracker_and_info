@@ -1,6 +1,7 @@
 import React from "react";
 import Counter from "../common/Counter";
 function Footer() {
+  const d = new Date();
   return (
     <>
       <footer className='page-footer font-small teal pt-4 footer'>
@@ -43,17 +44,25 @@ function Footer() {
         </div>
 
         <div className='footer-copyright text-center py-3 cpright text-white'>
-          © 2020 Copyright:
-          <a
-            href='https://github.com/thecreatorsir'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            thecreatorsir
-          </a>
-          <span className='page-hit'>
-            <Counter />
-          </span>
+          <div className='row'>
+            <div className='col-md-10 col-6'>
+              <div className='cpright-span'>
+                © {d.getFullYear()} Copyright:
+                <a
+                  href='https://github.com/thecreatorsir'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  thecreatorsir
+                </a>
+              </div>
+            </div>
+            <div className='col-md-2 col-6'>
+              <div className='page-hit'>
+                <Counter />
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </>
