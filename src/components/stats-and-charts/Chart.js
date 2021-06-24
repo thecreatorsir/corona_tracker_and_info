@@ -31,12 +31,13 @@ class Chart extends Component {
       get(
         `https://api.covid19api.com/total/country/${this.state.country}`
       ).then((data) => {
-        this.setState({
-          date: data.map((data) => data.Date),
-          cases: data.map((data) => data.Confirmed),
-          deaths: data.map((data) => data.Deaths),
-          recovered: data.map((data) => data.Recovered),
-        });
+        !data.message &&
+          this.setState({
+            date: data.map((data) => data.Date),
+            cases: data.map((data) => data.Confirmed),
+            deaths: data.map((data) => data.Deaths),
+            recovered: data.map((data) => data.Recovered),
+          });
       });
     }
   }
@@ -45,12 +46,13 @@ class Chart extends Component {
     //getting data for graph
     get(`https://api.covid19api.com/total/country/${this.state.country}`).then(
       (data) => {
-        this.setState({
-          date: data.map((data) => data.Date),
-          cases: data.map((data) => data.Confirmed),
-          deaths: data.map((data) => data.Deaths),
-          recovered: data.map((data) => data.Recovered),
-        });
+        !data.message &&
+          this.setState({
+            date: data.map((data) => data.Date),
+            cases: data.map((data) => data.Confirmed),
+            deaths: data.map((data) => data.Deaths),
+            recovered: data.map((data) => data.Recovered),
+          });
       }
     );
   }

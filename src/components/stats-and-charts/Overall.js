@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CountryOptions from "./CountryOptions";
 import CountUp from "react-countup";
 import numeral from "numeral";
+import VanillaTilt from "vanilla-tilt";
 async function get(url) {
   //async will return the premise
   const response = await fetch(url);
@@ -47,6 +48,15 @@ class Cards extends Component {
         });
       }
     );
+
+    //card effect
+    VanillaTilt.init(document.querySelector(".card-container"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.8,
+      scale: 1.07,
+    });
   }
 
   get_country(value) {
@@ -61,17 +71,19 @@ class Cards extends Component {
     let Confirmed = numeral(country_data["Total Cases_text"]);
 
     return (
-      <div className='container'>
-        <div className='mt-5 mb-5'>
-          <div className='row'>
-            <div className='col-md-2 text-center covid-short-info'>
+      <div className='mt-5 mb-5'>
+        <div className='row'>
+          <div className='col-md-3 col-12'>
+            <div className='text-center covid-short-info'>
               <p>
                 Coronavirus disease (COVID-19) is an infectious disease caused
                 by a new virus that had not been previously identified in
                 humans.
               </p>
             </div>
-            <div className='col-md-6 card-container'>
+          </div>
+          <div className='col-md-6 col-12'>
+            <div className='card-container'>
               <div className='row p-3'>
                 <div className='col-md-8 col-6'>
                   <h3 className='card-heading'>{this.state.country}</h3>
@@ -120,7 +132,9 @@ class Cards extends Component {
                 <small>last updated an hour ago</small>
               </div>
             </div>
-            <div className='col-md-3 col-12 global-data-container'>
+          </div>
+          <div className='col-md-3 col-12'>
+            <div className='global-data-container'>
               <p className='global-data-heading'>Global Stats</p>
               <div className='global_data'>
                 <ul>
