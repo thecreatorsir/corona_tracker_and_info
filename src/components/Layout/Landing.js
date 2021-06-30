@@ -1,5 +1,5 @@
 import React from "react";
-import Overall from "../stats-and-charts/Overall";
+import SelectedCountry from "../stats-and-charts/SelectedCountry";
 import Chart from "../stats-and-charts/Chart";
 import ExploreMore from "../explore-more/ExploreMore";
 import Symptoms from "../covidinfo/Symptoms";
@@ -8,7 +8,7 @@ import WashHandSigns from "../directions/WashHandSigns";
 function Landing() {
   return (
     <div className='Landing'>
-      <Overall />
+      <SelectedCountry />
       <Chart />
       <ExploreMore />
       <Symptoms />

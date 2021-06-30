@@ -1,89 +1,41 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import ChartUtil from "./ChartUtil";
 import CountryOptions from "./CountryOptions";
-//api call
-async function get(url) {
-  //async will return the premise
-  const response = await fetch(url);
-  const resData = await response.json();
-  return resData;
-}
+import { connect } from "react-redux";
+import { getChartData } from "../../Redux/actionCreators";
 
-class Chart extends Component {
-  constructor(props) {
-    super(props);
+const Chart = (props) => {
+  const { chart_data } = props.ChartData;
+  const { getChartData } = props;
+  const [country, setcountry] = useState("India");
+  useEffect(() => {
+    getChartData(country);
+  }, [getChartData, country]);
 
-    this.state = {
-      date: [],
-      cases: [],
-      deaths: [],
-      recovered: [],
-      country: "India",
-    };
+  const get_country_graph = (value) => {
+    setcountry(value);
+  };
 
-    this.get_country_graph = this.get_country_graph.bind(this);
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // //for country wise stat
-
-    if (prevState.country !== this.state.country) {
-      get(
-        `https://api.covid19api.com/total/country/${this.state.country}`
-      ).then((data) => {
-        !data.message &&
-          this.setState({
-            date: data.map((data) => data.Date),
-            cases: data.map((data) => data.Confirmed),
-            deaths: data.map((data) => data.Deaths),
-            recovered: data.map((data) => data.Recovered),
-          });
-      });
-    }
-  }
-
-  componentDidMount() {
-    //getting data for graph
-    get(`https://api.covid19api.com/total/country/${this.state.country}`).then(
-      (data) => {
-        !data.message &&
-          this.setState({
-            date: data.map((data) => data.Date),
-            cases: data.map((data) => data.Confirmed),
-            deaths: data.map((data) => data.Deaths),
-            recovered: data.map((data) => data.Recovered),
-          });
-      }
-    );
-  }
-
-  get_country_graph(value) {
-    this.setState({
-      country: value,
-    });
-  }
-
-  render() {
-    const { date, cases, deaths, recovered, country } = this.state;
-    return (
-      <div className='container'>
-        <div className='jumbotron chart-container'>
-          <CountryOptions
-            get_country_graph={this.get_country_graph}
-            call_by='graph'
+  return (
+    <div className='container'>
+      <div className='jumbotron chart-container'>
+        <CountryOptions get_country_graph={get_country_graph} call_by='graph' />
+        <div className='chart'>
+          <ChartUtil
+            date={chart_data.date}
+            cases={chart_data.cases}
+            deaths={chart_data.deaths}
+            recovered={chart_data.recovered}
+            country={chart_data.country}
           />
-          <div className='chart'>
-            <ChartUtil
-              date={date}
-              cases={cases}
-              deaths={deaths}
-              recovered={recovered}
-              country={country}
-            />
-          </div>
         </div>
       </div>
-    );
-  }
-}
-export default Chart;
+    </div>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  ChartData: state.ChartData,
+});
+
+export default connect(mapStateToProps, { getChartData })(Chart);

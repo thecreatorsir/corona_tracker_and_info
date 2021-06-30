@@ -1,0 +1,4 @@
+export const SET_GLOBAL_DATA = "SET_GLOBAL_DATA";
+export const SET_STATE_DATA = "SET_STATE_DATA";
+export const SET_SELECTED_DATA = "SET_SELECTED_DATA";
+export const SET_CHART_DATA = "SET_CHART_DATA";

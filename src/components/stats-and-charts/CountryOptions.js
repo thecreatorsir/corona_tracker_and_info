@@ -4,8 +4,6 @@ import { Component } from "react";
 class CountryOptions extends Component {
   constructor(props) {
     super(props);
-    this.state = { value_country: "india", value_graph: "india" };
-
     this.handleChange = this.handleChange.bind(this);
   }
 

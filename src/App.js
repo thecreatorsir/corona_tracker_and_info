@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+import { Provider } from "react-redux";
+import store from "./Redux/configStore";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./components/Layout/Nav";
 import Footer from "./components/Layout/Footer";
@@ -10,17 +12,19 @@ import VaccinationInfo from "./components/stats-and-charts/VaccinationInfo";
 import ScrollToTop from "./components/common/ScrollToTop";
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className='App'>
-        <Nav />
-        <Route exact path='/' component={Landing} />
-        <Route exact path='/state-info' component={StatesInfo} />
-        <Route exact path='/more-info' component={CovidInfo} />
-        <Route exact path='/vaccination-info' component={VaccinationInfo} />
-        <Footer />
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <ScrollToTop />
+        <div className='App'>
+          <Nav />
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/state-info' component={StatesInfo} />
+          <Route exact path='/more-info' component={CovidInfo} />
+          <Route exact path='/vaccination-info' component={VaccinationInfo} />
+          <Footer />
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
